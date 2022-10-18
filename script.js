@@ -3,12 +3,16 @@ let wrong2 = document.querySelector("#inner-layer ");
 let correctRotate = document.querySelector("#inner-layer2 ");
 let correctRotate2 = document.querySelector("#second-layer ");
 
-let totalQns = 100;
+let totalQns = 37;
 let random = Math.floor(Math.random() * totalQns + 1);
 let results = random / totalQns;
+let passed = (random / totalQns) * 100;
+passed = Math.round(passed * 10) / 10;
+let failed = ((totalQns - random) / totalQns) * 100;
+failed = Math.round(failed * 10) / 10;
 
 console.log(results);
-function aboveHalf() {
+function pass() {
   //   totalQns = 10;
   let half = 0.5;
   let percAboveHalf = results - 0.5;
@@ -35,5 +39,51 @@ function aboveHalf() {
   }
 }
 console.log(random);
-aboveHalf();
+pass();
 // console.log(5 + "px")
+let div1 = document.querySelector("#percentage-pass-info");
+let numberOfQsPass = document.createElement("div");
+let percentagePassed = document.createElement("div");
+function displayPass() {
+  numberOfQsPass.classList = "number_of_qs_pass";
+  percentagePassed.classList = "percentage-passed";
+  percentagePassed.innerText = `${passed}%`;
+  numberOfQsPass.innerText = `${random} | ${totalQns}`;
+  div1.appendChild(percentagePassed);
+  div1.appendChild(numberOfQsPass);
+}
+displayPass();
+let div2 = document.querySelector("#percentage-fail-info");
+let numberOfQsFail = document.createElement("div");
+let percentageFailed = document.createElement("div");
+function displayFail() {
+  numberOfQsFail.classList = "number_of_qs_fail;";
+  percentageFailed.classList = "percentage-fail";
+  percentageFailed.innerText = `${failed}%`;
+  numberOfQsFail.innerText = `${totalQns - random} | ${totalQns}`;
+  div2.appendChild(percentageFailed);
+  div2.appendChild(numberOfQsFail);
+}
+displayFail();
+function getCert() {
+  let getCv = document.querySelector("#getCv");
+  if (results <= 0.6) {
+    getCv.innerHTML = "";
+
+    let fail = document.createElement("p");
+    fail.classList = "again";
+    fail.innerText = "Unfortunately!";
+    let nextTime = document.createElement("p");
+    nextTime.classList = "do_not_give_up";
+    nextTime.innerText = "You failed the exam";
+    let note = document.createElement("p");
+    note.classList = "come_back";
+    note.innerText = "You can contact your TA's for help on 1on1";
+    getCv.appendChild(fail);
+    getCv.appendChild(nextTime);
+    getCv.appendChild(note);
+    getCv.style.marginLeft = "0px";
+    getCv.style.marginTop = "40px";
+  }
+}
+getCert();
