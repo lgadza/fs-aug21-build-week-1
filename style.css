@@ -77,8 +77,10 @@ p {
   /* border-color: #00ffff; */
   padding-left: 50px;
   padding-right: 50px;
-  box-shadow: 0px 0px 30px 1px #00ffff;
   /* box-shadow: transparent; */
+}
+#proceed:hover {
+  box-shadow: 0px 0px 30px 1px #00ffff;
 }
 #agreeAndProceed {
   margin-top: 40px;
@@ -90,10 +92,15 @@ p {
   justify-content: center;
   /* align-items: ; */
 }
-#mainSection {
+#mainSectionWelcome {
   margin-top: 0px;
   padding-top: 0;
 }
+
+/* #mainSection {
+  margin-top: 0px;
+  padding-top: 0;
+} */
 label {
   font-weight: bold;
 }
@@ -233,12 +240,15 @@ span {
   justify-content: center;
   align-items: center;
   margin-left: 43%;
-  padding: 10px 40px;
+  padding: 15px 50px;
   font-weight: bold;
   background-color: transparent;
   border: 1px solid white;
   color: white;
   font-size: 1.1em;
+}
+#rate:hover {
+  box-shadow: 0px 0px 10px 0.1px #00ffff;
 }
 #correct {
   font-size: 40px;
@@ -287,3 +297,21 @@ span {
 .come_back {
   font-size: 12px;
 }
+#h1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+#recommend {
+  text-align: center;
+}
+#stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.darkStar {
+  color: #d20094;
+  /* fill: #d20094 !important; */
+}
+/* "#00FFFF" */
