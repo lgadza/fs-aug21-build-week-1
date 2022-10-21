@@ -194,8 +194,8 @@ ion-icon path {
   display: none;
 } */
 #clock-container {
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   background-color: #9a6a9e;
   /* background-color: blue; */
   border-radius: 50%;
@@ -235,8 +235,8 @@ ion-icon path {
   /* display: none; */
 }
 .outmostCircle {
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
   background-color: #39144c;
   border-radius: 50%;
   z-index: 5;
