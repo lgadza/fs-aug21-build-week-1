@@ -182,7 +182,8 @@ body {
 .outmostCircle {
   width: 130px;
   height: 130px;
-  background-color: #39144c;
+  /* background-color: #39144c; */
+  background-color: #772c7e;
   border-radius: 50%;
   z-index: 5;
   position: absolute;

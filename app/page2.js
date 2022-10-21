@@ -381,7 +381,8 @@ function wholeClock() {
     clearInterval(timerLoop);
   }
 }
-// wholeClock();
+wholeClock();
+timingTimer();
 
 nextButton.addEventListener("click", wholeClock);
 nextButton.addEventListener("mousedown", timingTimer);
