@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style/stylePage2.css" />
+    <title>Quiz</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- nav -->
+      <nav id="nav">
+        <!-- <img class="image" src="/assets/epicode_logo.png" alt="epicode logo" /> -->
+        <div class="flagAndIcon">
+          <img
+            class="image flag"
+            src="/assets/british_flag.png"
+            alt="epicode logo"
+          />
+          <ion-icon name="scan-outline"></ion-icon>
+        </div>
+
+        <div id="clock-container">
+          <div class="semiCircle"></div>
+          <div class="semiCircle"></div>
+          <div class="semiCircle"></div>
+          <div class="outmostCircle">
+            <p id="sec">SECONDS</p>
+            <p id="secNum"></p>
+            <p id="remain">REMAINING</p>
+          </div>
+        </div>
+      </nav>
+      <!-- question & answers -->
+      <main id="main">
+        <h1 class="questionText"></h1>
+        <div class="answers"></div>
+      </main>
+      <!-- scoreboard -->
+      <footer id="footer">
+        <!-- <div class="scoreboard">Score</div> -->
+        <div class="info">
+          <h3 id="constantString">QUESTION</h3>
+          <h3 id="ramainingQuestions">1</h3>
+          <h3 id="totalQuestions"></h3>
+        </div>
+        <div class="buttons">
+          <button class="nextButton">
+            <!-- <button class="nextButton hideBtn"> -->
+            <!-- Next <ion-icon name="arrow-forward-outline"></ion-icon> -->
+            Next
+          </button>
+          <button class="scoreboardButton">
+            <a href="/html/page3.html"> See Result </a>
+            <!-- <button class="scoreboardButton showBtn"> -->
+            <!-- See Result<ion-icon name="arrow-forward-outline"></ion-icon> -->
+          </button>
+          <!-- <h3 id="score"></h3> -->
+        </div>
+      </footer>
+    </div>
+
+    <!-- ion icons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- js file -->
+    <script src="/app/page2.js"></script>
+  </body>
+</html>
