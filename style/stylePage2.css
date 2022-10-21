@@ -29,6 +29,13 @@ body {
   height: 40px;
   object-fit: contain;
 } */
+.image {
+  display: block;
+  width: 160px;
+  height: 40px;
+  margin-top: 50px;
+  margin-left: 10%;
+}
 
 #nav {
   display: flex;
