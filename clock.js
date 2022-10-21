@@ -1,5 +1,5 @@
 timeH = document.getElementById("secNum");
-let timeSecond = Math.floor(Math.random() * 60);
+let timeSecond = 5;
 
 function displayTime(second) {
   const sec = Math.floor(second % 60);
@@ -23,15 +23,18 @@ const timeStart = function () {
 };
 //CLOCK CODE
 const semicircles = document.querySelectorAll(".semiCircle");
-console.log(semicircles);
-let hr = 0;
-let min = 0;
-let sec = 5;
-let hours = hr * 3600000;
-let minutes = min * 60000;
-let seconds = sec * 1000;
-let setTime = hours + minutes + seconds;
+function secondPart() {
+  //   console.log(semicircles);
+  let hr = 0;
+  let min = 0;
+  let sec = 5;
+  let hours = hr * 3600000;
+  let minutes = min * 60000;
+  let seconds = sec * 1000;
+  let setTime = hours + minutes + seconds;
+}
 let timerLoop = setInterval(countDownTimer);
+
 function clockPart1() {
   let startTime = Date.now();
   let futureTime = startTime + setTime;
@@ -62,7 +65,6 @@ function countDownTimer() {
   //   timeH.innerText = `${secs}`;
   if (remainingTime < 0) {
     clearInterval(timerLoop);
-    // timeH.innerText = `0`;
   }
 }
 // console.log(nextButton);
@@ -74,8 +76,3 @@ function countDownTimer() {
 // nextButton.addEventListener("click", countDownTimer);
 nextButton.addEventListener("click", countDownTimer);
 nextButton.addEventListener("click", futureTime);
-// nextButton.addEventListener("click", () => {
-//   document.location.reload();
-// });
-
-// console.log(hours);
